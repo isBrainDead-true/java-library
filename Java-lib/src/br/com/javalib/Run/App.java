@@ -7,7 +7,7 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String str = "Jorel";
+		String str = "inacio";
 		System.out.println(MyString.toString(str));
 
 	}

@@ -2,10 +2,20 @@ package br.com.javalib.Stringfy;
 
 public abstract class MyString {
 	
+	public static int anagram(String wrd) {
+		int idx = wrd.length();
+		int sum = idx;	
+		while(idx > 1) {
+			sum = sum * (idx - 1);
+			idx--;
+		}
+		return sum;
+	}
 	
 	public static boolean isVowel(char tkn) {
-		return tkn == 'A' || tkn == 'a' || tkn == 'E' || tkn == 'e' || tkn == 'I' || tkn == 'i' || tkn == 'O' || tkn == 'o'
-				|| tkn =='U' || tkn == 'u';
+		char tmp = Character.toLowerCase(tkn);
+		return tmp == 'a' || tmp == 'e' || tmp == 'i' || tmp == 'o'
+				|| tmp == 'u';
 	}
 
 	public static String removeAllVowels(String wrd) {
@@ -72,6 +82,7 @@ public abstract class MyString {
 				+ "\nReversa: " + reverse(wrd)
 				+ "\nPalavra palindrona: " + isPalindron(wrd)
 				+ "\nPalavra sem vogais: " + removeAllVowels(wrd)
-				+ "\nPalavra Aleatoria: " + shuffle(wrd); 
+				+ "\nPalavra Aleatoria: " + shuffle(wrd)
+				+ "\nAnagrama: " + anagram(wrd); 
 	}
 }
